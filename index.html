@@ -1,62 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>BBS Fleet Management</title>
 
-    <!-- PWA Manifest -->
     <link rel="manifest" href="manifest.json">
-
-    <!-- Android theme colour -->
     <meta name="theme-color" content="#1a73e8">
 
-    <!-- iPhone settings -->
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-title" content="BBS Fleet">
-
     <link rel="apple-touch-icon" href="icon-192.png">
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+
+        window.onload = function() {
+            window.location.href =
+            "https://script.google.com/macros/s/AKfycbwWLHEW9Z7iJg8tf_IzM_XYicJmK0IBh7rB8UEe1lLyg6d6LCy5ZD1acVwCQ7Y90Nfxmw/exec";
+        };
+    </script>
 
 </head>
 
 <body>
 
-    <h2>BBS Fleet Management</h2>
-
-    <p>Your fleet management system</p>
-
-    <button onclick="openFleetApp()" style="
-        padding:15px 25px;
-        font-size:16px;
-        border-radius:8px;
-        cursor:pointer;">
-        Open Fleet App
-    </button>
-
-
-    <script>
-
-        // Register Service Worker
-        if ("serviceWorker" in navigator) {
-            navigator.serviceWorker.register("service-worker.js")
-            .then(function() {
-                console.log("Service Worker Registered");
-            });
-        }
-
-
-        // Open Google Apps Script App
-        function openFleetApp() {
-
-            window.location.href =
-            "https://script.google.com/macros/s/AKfycbwWLHEW9Z7iJg8tf_IzM_XYicJmK0IBh7rB8UEe1lLyg6d6LCy5ZD1acVwCQ7Y90Nfxmw/exec";
-
-        }
-
-    </script>
+<h3>Opening BBS Fleet Management...</h3>
 
 </body>
-
 </html>
