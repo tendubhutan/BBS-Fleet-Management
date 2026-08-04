@@ -1,11 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BBS Vehicle App</title>
+    <title>BBS Fleet Management</title>
+
+    <link rel="manifest" href="manifest.json">
+
+    <meta name="theme-color" content="#1a73e8">
+
     <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwWLHEW9Z7iJg8tf_IzM_XYicJmK0IBh7rB8UEe1lLyg6d6LCy5ZD1acVwCQ7Y90Nfxmw/exec">
 </head>
 
 <body>
-    <h3>Opening BBS Vehicle App...</h3>
+    <h3>Opening BBS Fleet Management...</h3>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("service-worker.js");
+        }
+    </script>
+
 </body>
 </html>
