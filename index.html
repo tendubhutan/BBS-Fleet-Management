@@ -4,20 +4,26 @@
     <title>BBS Fleet Management</title>
 
     <link rel="manifest" href="manifest.json">
-
     <meta name="theme-color" content="#1a73e8">
-
-    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwWLHEW9Z7iJg8tf_IzM_XYicJmK0IBh7rB8UEe1lLyg6d6LCy5ZD1acVwCQ7Y90Nfxmw/exec">
-</head>
-
-<body>
-    <h3>Opening BBS Fleet Management...</h3>
+    <meta name="apple-mobile-web-app-capable" content="yes">
 
     <script>
+        function openApp() {
+            window.location.href = "https://script.google.com/macros/s/AKfycbwWLHEW9Z7iJg8tf_IzM_XYicJmK0IBh7rB8UEe1lLyg6d6LCy5ZD1acVwCQ7Y90Nfxmw/exec";
+        }
+
         if ("serviceWorker" in navigator) {
             navigator.serviceWorker.register("service-worker.js");
         }
     </script>
+</head>
 
+<body>
+    <h2>BBS Fleet Management</h2>
+    <p>Opening application...</p>
+
+    <button onclick="openApp()">
+        Open Fleet App
+    </button>
 </body>
 </html>
